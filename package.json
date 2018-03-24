@@ -21,5 +21,8 @@
     "mongoose": "^5.0.11",
     "restify": "^7.0.0",
     "supervisor": "^0.12.0"
+  },
+  "dependencies": {
+    "lda": "^0.2.0"
   }
 }
