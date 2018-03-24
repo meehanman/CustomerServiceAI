@@ -10,15 +10,18 @@ settings = {
     port: 8080
 };
 
-
-
-  //Mongoose Settings
+//Mongoose Settings
  mongoose.connect('mongodb://admin:admin@ds121349.mlab.com:21349/customerserviceai');
 
  var server = restify.createServer({});
 
  //Include Mongo Tables
-var User = require('./app/models/customer');
+ var customer = require('./app/models/customers');
+ var complaint = require('./app/models/complaints');
+ var employee = require('./app/models/employees');
+ var order = require('./app/models/orders');
+ var product = require('./app/models/products');
+ var review = require('./app/models/reviews');
 
 //Include Routes
 require('./app/routes/default.js')(server);
