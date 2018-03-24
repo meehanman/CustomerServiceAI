@@ -1,0 +1,40 @@
+body{
+  background-color: #e8e8e8;
+}
+
+
+/* .leftChat{
+  background-color: green;
+} */
+
+
+.breadcrumb{
+border-radius: 0px 10px 10px 10px;
+}
+
+.breadcrumb-alt{
+flex-wrap: wrap;
+padding: .75rem 1rem;
+margin-bottom: 1rem;
+list-style: none;
+background-color: #28a745;
+border-radius: 10px 10px 0px 10px;
+color:#fff;
+}
+
+.chatUser{
+  color:#fff;
+}
+
+.chatWindow{
+  overflow: auto;
+  height:400px;;
+}
+
+.chatInput{
+  width: 100%;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    border: 1px solid #dddede;
+    padding: 7.5px;
+}
