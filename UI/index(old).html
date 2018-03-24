@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href='css/custom.css'>
+    <title>Live Chat - Product Support</title>
+    <script>
+
+      $(document).ready(function () {
+        $("chatWindow").append("  <div class=" list - group ">
+ < div class = "list-group-item list-group-item-action active" > <b class="subtext">
+          Automatic Assistant
+        </b>
+      </br>Hey % user %, based on your previous orders, we think you might have one of these issues, if you have one of the issues below, please select it.</div>
+      <a href="#" class="list-group-item list-group-item-action">Cable supplied is US standard</a> < a href = "#" class = "list-group-item list-group-item-action" > Product will not power on</a> < a href = "#" class = "list-group-item list-group-item-action" > I cannot mount the bracket</a> < a href = "#" class = "list-group-item list-group-item-action " > Product color is wrong</a> < /div>
+            <!-- END Support Chat Window -->");
+    });
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="card mt-5">
+        <div class="card-body">
+          <div class="row">
+            <div class='col-md-3 leftChat'>
+
+              <div class="row">
+                <div class='mx-auto'>
+                  <img width=' 150px' class="img-thumbnail rounded-circle" src="img/profile.jpg" alt="...">
+                </div>
+              </div>
+              <div class="row">
+                <div class='mt-3 mx-auto'>
+                  <h4>
+                    John Doe
+                  </h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class='mx-auto'>
+                  <p class='subtext'>
+                    Customer Service Representive
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class='col-md-9'>
+              <h4>
+                Live Chat
+              </h4>
+              <hr>
+              <div class="chatWindow mb-3 pb-4">
+
+                <!-- Support Chat Window -->
+
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">
+                      <b class="subtext">
+                        Customer Service Representive
+                      </b>
+                    </br>
+                    Lorem ipsum dolor sit amet, an libris placerat sea, ex vis dicit consequuntur. Duis habeo ne quo, alii liberavisse vel id, ius eu epicuri concludaturque. Ex per doming abhorreant. Id sit veritus adolescens, ei modo efficiantur pro. Erant maluisset
+                    hendrerit te has.</li>
+                </ol>
+              </nav>
+
+              <!-- User Chat Window -->
+
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb-alt">
+                  <li class="breadcrumb-item chatUser" aria-current="page">
+                    <b class="subtext">
+                      You
+                    </b>
+                  </br>
+                  Lorem ipsum dolor sit amet, an libris placerat sea, ex vis dicit consequuntur. Duis habeo ne quo, alii liberavisse vel id, ius eu epicuri concludaturque. Ex per doming abhorreant. Id sit veritus adolescens, ei modo efficiantur pro. Erant maluisset
+                  hendrerit te has.</li>
+              </ol>
+            </nav>
+            <!-- END User Chat Window -->
+            -->
+
+            <div class="list-group">
+              <div class="list-group-item list-group-item-action active">
+                <b class="subtext">
+                  Automatic Assistant
+                </b>
+              </br>
+              Hey %user%, based on your previous orders, we think you might have one of these issues, if you have one of the issues below, please select it.
+            </div>
+            <a href="#" class="list-group-item list-group-item-action">Cable supplied is US standard</a>
+            <a href="#" class="list-group-item list-group-item-action">Product will not power on</a>
+            <a href="#" class="list-group-item list-group-item-action">I cannot mount the bracket</a>
+            <a href="#" class="list-group-item list-group-item-action ">Product color is wrong</a>
+          </div>
+          <!-- END Support Chat Window -->
+
+        </div>
+        <!-- End Chat Window -->
+
+        <!-- Chat Input -->
+        <p class="inputLabel">Your Message</p>
+        <input class="chatInput" rows="2" type="textarea"></input>
+        <!-- End Chat Input -->
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>
+
+var callbackFunc = function (x) {
+  console.log("Recieved a response: ", x);
+};
+
+$.ajax({
+  url: "http://167.99.91.119:8080/getProblems",
+  success: callbackFunc data: {
+    test: "hello wizards"
+  }
+});
+console.log("finished!");
+</script>
+</body>
+</html>

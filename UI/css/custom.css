@@ -28,7 +28,7 @@ color:#fff;
 
 .chatWindow{
   overflow: auto;
-  height:400px;;
+  height:550px;
 }
 
 .chatInput{
@@ -37,4 +37,33 @@ color:#fff;
     border-radius: 10px;
     border: 1px solid #dddede;
     padding: 7.5px;
+    color: #6c757c;
+}
+
+.subtext{
+      font-size: 10pt;
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: #6c757c;
+    background-color: #e9ecef;
+    border-color: #dadada;
+  }
+  .list-group-item-action:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #29a745;
+  }
+
+  .list-group-item.active:hover {
+    z-index: 2;
+    color: #6c757c;
+    background-color: #e9ecef;
+    border-color: #dadada;
+}
+
+.inputLabel{
+  font-size: 10pt;
+      margin-bottom: 0.5rem;
 }
