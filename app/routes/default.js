@@ -12,7 +12,7 @@ module.exports = function (server) {
 	//Adding a Customer
 	server.get('/customer', function (req, res, next) {
 
-		var customer = new User({
+		var customer = new Customer({
 			name: req.body.name,
 			email: req.body.email,
 			password: "password"
