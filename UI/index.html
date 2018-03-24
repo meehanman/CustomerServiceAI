@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,6 +12,7 @@
     <title>Live Chat - Product Support</title>
 
   </head>
+
   <body>
     <div class="container-fluid">
       <div class="card mt-5">
@@ -82,10 +84,11 @@
     <script>
       $("#chatWindowText").append('<nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item active" aria-current="page"><b class="subtext">Customer Service Representive</b></br>Hey, how can we help you?</li></ol></nav>');
 
-      function sendtoserver() {
-        var text = $("#userInput").value;
+      function sendToServer() {
+        var text = $("#userInput").val();
         $("#chatWindowText").append('<nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item active" aria-current="page"><b class="subtext">You</b></br>' + text + '</li></ol></nav>');
       }
     </script>
   </body>
+
 </html>
