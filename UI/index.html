@@ -14,7 +14,8 @@
   </head>
 
   <body>
-    <div class="container-fluid">
+    <div id="loading">Loading...</div>
+    <div id="main-content" class="container-fluid" style="display:none;">
       <div class="card mt-5">
         <div class="card-body">
           <div class="row">
@@ -22,13 +23,13 @@
 
               <div class="row">
                 <div class='mx-auto'>
-                  <img width=' 150px' class="img-thumbnail rounded-circle" src="img/profile.jpg" alt="...">
+                  <img data-hero="user.profile.image" width=' 150px' class="img-thumbnail rounded-circle" alt="...">
                 </div>
               </div>
               <div class="row">
                 <div class='mt-3 mx-auto'>
                   <h4>
-                    John Doe
+                    <span data-hero="user.profile.name">
                   </h4>
                 </div>
               </div>

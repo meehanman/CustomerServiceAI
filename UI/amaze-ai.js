@@ -3,13 +3,31 @@
  var gotProblems = false;
  var gotResolutions = false;
  var msg = '';
+ var user;
+
+
+ $.ajax({
+    url: 'https://randomuser.me/api/',
+    dataType: 'json',
+    success: function(data) {
+        var user = data.results[0];
+        console.log(user.picture.thumbnail);
+        $("[data-hero='user.profile.image").attr("src",user.picture.large);
+        $("[data-hero='user.profile.name").text(user.name.first+" "+user.name.last);
+        $("[data-hero='user.profile.firstname").text(user.name.first);
+        $('#loading').hide();
+        $('#main-content').show();
+    }
+  });
+
+
 
  function addChatBot(user, msg) {
    $("#chatWindowText").append('<nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item active" aria-current="page"><b class="subtext">' + user + '</b></br>' + msg + '</li></ol></nav>');
  };
 
  //append initial comment
- addChatBot("Chat Bot", "Hey, before we connect you to a live agent lets see if I can help! Can you give me a brief description of your problem?");
+ addChatBot("Chat Bot", "Hey <span data-hero='user.profile.firstname' />, before we connect you to a live agent lets see if I can help! Can you give me a brief description of your problem?");
 
 
  function getProblems() {
