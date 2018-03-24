@@ -12,63 +12,9 @@ module.exports = function (server) {
 		function (req, res) {
 			res.json({
 				"version": 1.0,
-				"author": "Hack the Hub Team Wizards"
+				"author": "Hack the Hub Team Ahhhhhh"
 			});
 		});
-
-	//Getting All Customers
-	server.get('/customer', function (req, res, next) {
-		customer.find({})
-			.exec(function (error, data) {
-				res.json(data);
-			});
-		return next();
-	});
-
-	//Getting All complaints
-	server.get('/complaint', function (req, res, next) {
-		customer.find({})
-			.exec(function (error, data) {
-				res.json(data);
-			});
-		return next();
-	});
-
-	//Getting All employees
-	server.get('/employee', function (req, res, next) {
-		customer.find({})
-			.exec(function (error, data) {
-				res.json(data);
-			});
-		return next();
-	});
-
-	//Getting All orders
-	server.get('/order', function (req, res, next) {
-		customer.find({})
-			.exec(function (error, data) {
-				res.json(data);
-			});
-		return next();
-	});
-
-	//Getting All products
-	server.get('/product', function (req, res, next) {
-		customer.find({})
-			.exec(function (error, data) {
-				res.json(data);
-			});
-		return next();
-	});
-
-	//Getting All reviews
-	server.get('/review	', function (req, res, next) {
-		customer.find({})
-			.exec(function (error, data) {
-				res.json(data);
-			});
-		return next();
-	});
 
 	server.get('/getProblems', function (req, res, next) {
 
@@ -106,6 +52,20 @@ module.exports = function (server) {
 			"probability": 0.2
 		}]);
 		return next();
+	});
+
+	server.get('/fuckit', function(req, res, next){
+		res.send({
+			"_id": 234324342,
+			"name": "Dean Meehan",
+			"email": "d3an.meehan@hotmail.com",
+			"order": [{"_id":2423423,"product":"", "description": "<___PRODUCT_DESC___>", "reviews":["","","","","","","","","","",""]},
+					{"_id":2423423,"product":"<___PRODUCT_NAME___>", "description": "<___PRODUCT_DESC___>", "reviews":["","","","","","","","","","",""]},
+					{"_id":2423423,"product":"<___PRODUCT_NAME___>", "description": "<___PRODUCT_DESC___>", "reviews":["","","","","","","","","","",""]},
+					{"_id":2423423,"product":"<___PRODUCT_NAME___>", "description": "<___PRODUCT_DESC___>", "reviews":["","","","","","","","","","",""]},
+					{"_id":2423423,"product":"<___PRODUCT_NAME___>", "description": "<___PRODUCT_DESC___>", "reviews":["","","","","","","","","","",""]},
+					{"_id":2423423,"product":"<___PRODUCT_NAME___>", "description": "<___PRODUCT_DESC___>", "reviews":["","","","","","","","","","",""]}]
+		});
 	});
 
 
@@ -291,7 +251,6 @@ module.exports = function (server) {
 		return a;
 	}
 
-
 	function topicise(sentences) {
 		// console.log(sentences);
 		var documents = new Array();
@@ -340,8 +299,7 @@ module.exports = function (server) {
 			for (var w = 0; w < phi[k].length; w++) {
 				tuples.push("" + phi[k][w].toPrecision(2) + "_" + vocab[w]);
 			}
-			tuples.sort()
-				.reverse();
+			tuples.sort().reverse();
 			if (topTerms > vocab.length) topTerms = vocab.length;
 			topicText[k] = '';
 			for (var t = 0; t < topTerms; t++) {
