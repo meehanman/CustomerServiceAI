@@ -17,7 +17,7 @@ flex-wrap: wrap;
 padding: .75rem 1rem;
 margin-bottom: 1rem;
 list-style: none;
-background-color: #28a745;
+background-color: #D84500;
 border-radius: 10px 10px 0px 10px;
 color:#fff;
 }
@@ -53,9 +53,24 @@ color:#fff;
   .list-group-item-action:hover {
     color: #ffffff;
     text-decoration: none;
-    background-color: #29a745;
+    background-color: #D84500;
   }
 
+  .btn-outline-secondary {
+      color: #ffffff;
+      background-color: #d84501;
+      background-image: none;
+      border-color: #ffffff;
+      border-radius: 10px;
+      padding-left: 30px;
+padding-right: 30px;
+    }
+
+    .btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #ff590c;
+    border-color: #ced4db;
+  }
   .list-group-item.active:hover {
     z-index: 2;
     color: #6c757c;
@@ -66,4 +81,12 @@ color:#fff;
 .inputLabel{
   font-size: 10pt;
       margin-bottom: 0.5rem;
+}
+
+.chatTitle{
+  color:#D84500;
+}
+
+.CSRTitle{
+  color:#D84500;
 }
