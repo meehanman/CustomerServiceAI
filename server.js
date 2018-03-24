@@ -10,9 +10,7 @@ settings = {
     port: 8080
 };
 
-
-
-  //Mongoose Settings
+//Mongoose Settings
  mongoose.connect('mongodb://admin:admin@ds121349.mlab.com:21349/customerserviceai');
 
  var server = restify.createServer({});
