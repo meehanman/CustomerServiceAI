@@ -1,0 +1,25 @@
+{
+  "name": "customerserviceai",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000C\u0000u\u0000s\u0000t\u0000o\u0000m\u0000e\u0000r\u0000S\u0000e\u0000r\u0000v\u0000i\u0000c\u0000e\u0000A\u0000I\u0000\r\u0000 \u0000",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meehanman/CustomerServiceAI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meehanman/CustomerServiceAI/issues"
+  },
+  "homepage": "https://github.com/meehanman/CustomerServiceAI#readme",
+  "devDependencies": {
+    "mongoose": "^5.0.11",
+    "restify": "^7.0.0",
+    "supervisor": "^0.12.0"
+  }
+}
