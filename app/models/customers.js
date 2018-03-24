@@ -9,7 +9,7 @@ var customerSchema = new Schema({
 
 // the schema is useless so far
 // we need to create a model using it
-var Customer = mongoose.model('customers', customerSchema);
+var customer = mongoose.model('customers', customerSchema);
 
 // make this available to our users in our Node applications
-module.exports = Customer;
+module.exports = customer;
