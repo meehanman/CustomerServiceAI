@@ -32,6 +32,9 @@ function writeMessage(user, msg, type) {
           $("#chatWindowText").append('<nav aria-label="breadcrumb"><ol class="breadcrumb'+usrClass+'"><li class="breadcrumb-item '+chatUserClass+'" aria-current="page"><b class="subtext">' + user + '</b></br>' + msg + '</li></ol></nav>'+getItemHTML(1));
       }else if(type=="laptop"){
           $("#chatWindowText").append('<nav aria-label="breadcrumb"><ol class="breadcrumb'+usrClass+'"><li class="breadcrumb-item '+chatUserClass+'" aria-current="page"><b class="subtext">' + user + '</b></br>' + msg + '</li></ol></nav>'+getItemHTML(0));
+      }else if(type=="tv-issue"){
+         $("#chatWindowText").append('<div class="list-group"> <div class="list-group-item list-group-item-action active"> <b class="subtext"> ' + user + ' </b> <br> ' + msg + ' </div> <a href="#" class="list-group-item list-group-item-action">Cable supplied is US standard</a> <a href="#" class="list-group-item list-group-item-action">Product will not power on</a> <a href="#" hero-res="lang" class="list-group-item list-group-item-action">The TV Language supplied is not English.</a> <a href="#" class="list-group-item list-group-item-action ">Product color is wrong</a> </div>');
+      
       }
     if (loaded()) {
       update();

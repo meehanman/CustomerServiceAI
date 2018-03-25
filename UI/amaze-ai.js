@@ -31,11 +31,36 @@ Could not Connect to Agent. Please try again later. [Error 500]
    $("#userInput").val('');
  }
 
+ var magicString;
  function getResponce(question) {
    $("#userInput").val('');
 
+   if(magicString=="finished"){
+    console.info(magicString);
+   writeMessage(botName, "I hope that solved your issue. Do you need more help or want to speak to a person?");
+    return;
+  }
+  
+   if(contains(question,"another")){
+    locationIndex = -1;
+    return;
+   }
+
+   if(magicString=="tv-issues" && contains(question,"yes")){
+    writeMessage(botName, "We've found some problems based on reviews. Are any of these your issue?", "tv-issue");
+    //Display Laptop Reviews
+    return;
+  }
+
+  if(magicString=="watch-problem"){
+    writeMessage(botName, "I'm sorry to hear about that. We will contact you through to an agent soon. ");
+    //Display Laptop Reviews
+    return;
+  }
+
    if(contains(question,"laptop")){
     writeMessage(botName, "We couldn't find any suggested problems with your laptop. Connecting you to an agent...");
+     question = "agent";
     //Display Laptop Reviews
     return;
    }
@@ -48,12 +73,14 @@ Could not Connect to Agent. Please try again later. [Error 500]
 
    if(contains(question,"watch")||contains(question,"apple")){
     writeMessage(botName, "Hey, what problems did you have with your order?", "watch");
+    magicString = "watch-problem"
     //Display Orders
     return;
    }
 
    if(contains(question,"tv")){
-    writeMessage(botName, "Did you have a problem with your TV not turning on?", "tv");
+    writeMessage(botName, "Looking at your previous orders, I can see that you've ordered a <b>Sony QLED 2017 AE3000B32</b>. Is this the product your having issues with?", "tv");
+    magicString="tv-issues";
     //Display Orders
     return;
    }
@@ -64,28 +91,40 @@ Could not Connect to Agent. Please try again later. [Error 500]
     return;
    }
 
-   if(contains(question,"tv") && contains(question,"")){
+   if(contains(question,"agent")){
     writeMessage(botName, "Could not Connect to Agent. Please try again later. [Error 500]");
     //Display Orders
     return;
    }
    
    //Conversational
-   if (locationIndex == 0) {
+   if (locationIndex == -1) {
+    writeMessage(botName, "So how can I assist you...");
+    locationIndex = 1;
+    locationIndex++;
+  } else if (locationIndex == 0) {
     writeMessage(botName, "Hey <span data-hero='user.profile.firstname'/>, how can we help today?");
     locationIndex++;
   } else if (locationIndex == 1) {
-    writeMessage(botName, "Ooh, can you try that again?");
+    writeMessage(botName, "Hey there.");
     locationIndex++;
   }else if (locationIndex == 2) {
-    writeMessage(botName, "Sorry, I didn't get that. Do you want to talk to a representative?");
+    writeMessage(botName, "Ooh, can you try that again?");
     locationIndex++;
   }else if (locationIndex == 3) {
+    writeMessage(botName, "Sorry, I didn't get that. Do you want to talk to a representative?");
+    locationIndex++;
+  }else if (locationIndex == 4) {
     writeMessage(botName, "Closing Chat.");
     $('#userInput').attr("disabled","disabled");
     locationIndex++;
   }
  };
+
+ $('body').on('click', '[hero-res="lang"]', function(){
+  magicString="finished";
+  start("We're sorry about that. Here's some instructions on how to change the language. <a href='http://www.verizon.com/support/smallbusiness/tv/fiostv/guide/tv+programming/questionsone/123684.htm'>TV Guide - Language Change.</a>");
+});
 
  //Load first one
  getResponce();

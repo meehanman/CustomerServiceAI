@@ -30,3 +30,7 @@ $('#userInput').on('keypress', function (e) {
     $('#userInput').val("");
     }
 });
+
+$('body').on('click', '[hero-res="lang"]', function(){
+    start("We're sorry about that. Here's some instructions on how to change the language. <a src='http://www.verizon.com/support/smallbusiness/tv/fiostv/guide/tv+programming/questionsone/123684.htm'>TV Guide - Language Change.</a>");
+});
