@@ -10,26 +10,28 @@
 function writeMessage(user, msg, type) {
   var delay;
   var usrClass="";
+  var chatUserClass="active";
   //BOT
   if (user == botName) {
     delay = 1000;
     //NOT BOT
   } else {
     usrClass="-alt";
+    chatUserClass="chatuser"
     delay = 0;
   }
 
   setTimeout(() => {
       if(type==undefined){
-          $("#chatWindowText").append('<nav aria-label="breakcrumb'+usrClass+'"><ol class="breadcrumb"><li class="breadcrumb-item active" aria-current="page"><b class="subtext">' + user + '</b></br>' + msg + '</li></ol></nav>');
+          $("#chatWindowText").append('<nav aria-label="breadcrumb"><ol class="breadcrumb'+usrClass+'"><li class="breadcrumb-item '+chatUserClass+'" aria-current="page"><b class="subtext">' + user + '</b></br>' + msg + '</li></ol></nav>');
       }else if(type=="order"){
-          $("#chatWindowText").append('<nav aria-label="breakcrumb'+usrClass+'"><ol class="breadcrumb"><li class="breadcrumb-item active" aria-current="page"><b class="subtext">' + user + '</b></br>' + msg + '</li></ol></nav>');
+          $("#chatWindowText").append('<nav aria-label="breadcrumb"><ol class="breadcrumb'+usrClass+'"><li class="breadcrumb-item '+chatUserClass+'" aria-current="page"><b class="subtext">' + user + '</b></br>' + msg + '</li></ol></nav>');
       }else if(type=="watch"){
-          $("#chatWindowText").append('<nav aria-label="breakcrumb'+usrClass+'"><ol class="breadcrumb"><li class="breadcrumb-item active" aria-current="page"><b class="subtext">' + user + '</b></br>' + msg + '</li></ol></nav>'+getItemHTML(2));
+          $("#chatWindowText").append('<nav aria-label="breadcrumb"><ol class="breadcrumb'+usrClass+'"><li class="breadcrumb-item '+chatUserClass+'" aria-current="page"><b class="subtext">' + user + '</b></br>' + msg + '</li></ol></nav>'+getItemHTML(2));
       }else if(type=="tv"){
-          $("#chatWindowText").append('<nav aria-label="breakcrumb'+usrClass+'"><ol class="breadcrumb"><li class="breadcrumb-item active" aria-current="page"><b class="subtext">' + user + '</b></br>' + msg + '</li></ol></nav>'+getItemHTML(1));
+          $("#chatWindowText").append('<nav aria-label="breadcrumb"><ol class="breadcrumb'+usrClass+'"><li class="breadcrumb-item '+chatUserClass+'" aria-current="page"><b class="subtext">' + user + '</b></br>' + msg + '</li></ol></nav>'+getItemHTML(1));
       }else if(type=="laptop"){
-          $("#chatWindowText").append('<nav aria-label="breakcrumb'+usrClass+'"><ol class="breadcrumb"><li class="breadcrumb-item active" aria-current="page"><b class="subtext">' + user + '</b></br>' + msg + '</li></ol></nav>'+getItemHTML(0));
+          $("#chatWindowText").append('<nav aria-label="breadcrumb"><ol class="breadcrumb'+usrClass+'"><li class="breadcrumb-item '+chatUserClass+'" aria-current="page"><b class="subtext">' + user + '</b></br>' + msg + '</li></ol></nav>'+getItemHTML(0));
       }
     if (loaded()) {
       update();
