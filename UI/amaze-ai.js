@@ -2,7 +2,7 @@
  var botName = "Chatbot"
  var user;
  var csr;
-
+var keywords = [];
  //Example code is:
  /*
  Hey Charles, how can we help today?
@@ -15,7 +15,7 @@ Could not Connect to Agent. Please try again later. [Error 500]
 
  
  
- 
+ ORDER MATTERS
  
  */
  function displayRecentOrders(arrOfOrderNames) {

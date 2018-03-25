@@ -101,6 +101,9 @@ return '<div class="card" style="width: 18rem;"> <img class="card-img-top" src="
       }
       str = str.toLowerCase();
       substring = substring.toLowerCase();
-      console.log(str, substring, str.indexOf(substring) !== -1)
+      console.log(str, substring, str.indexOf(substring) !== -1);
+      if(str.indexOf(substring) !== -1){
+        keywords.push(substring);
+      }
       return str.indexOf(substring) !== -1;
   }
