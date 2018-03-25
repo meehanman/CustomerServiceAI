@@ -3,6 +3,21 @@
  var user;
  var csr;
 
+ //Example code is:
+ /*
+ Hey Charles, how can we help today?
+ Hi, I'm having trouble with my order
+Your recent orders were a Samsung TV, Apple Watch, Kettle and 3+ items. Do you need help with any of these?
+Yeah, my samsung tv is broke
+Did you have a problem with your TV not turning on?
+yes
+Could not Connect to Agent. Please try again later. [Error 500]
+
+ 
+ 
+ 
+ 
+ */
  function displayRecentOrders(arrOfOrderNames) {
    var displayProblemsToUser = '';
    displayProblemsToUser += '<div class="list-group"><div class="list-group-item list-group-item-action active"><b class="subtext"> Automatic Assistant </b>';
