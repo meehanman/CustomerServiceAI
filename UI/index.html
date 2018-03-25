@@ -15,10 +15,10 @@
   </head>
 
   <body>
-    <div id="loading">Loading...</div>
-    <div id="main-content" class="container-fluid" style="display:none;">
+    <div data-hero-page id="loading" style="text-align: center; margin-top: 25%;">Loading...</div>
+    <div data-hero-page id="main-content" class="container" style="display:none;">
       <div class="card mt-5">
-        <div class="card-body">
+        <div class="card-body" style="border-top: #d84501 4px solid;">
           <div class="row">
             <div class='col-md-3 leftChat'>
 
@@ -45,41 +45,50 @@
                 <h4 class='chatTitle'>
 
                   Online Live Support
-
-              <!-- Chat Input -->
-              <p class="inputLabel">Your Message</p>
-              <input id="userInput" class="chatInput" rows="2" type="textarea"></input>
-              <button id="submitQuestion">Send</button>
-              <!-- End Chat Input -->
                 </h4>
-
-
                 <hr>
                 <div id='chatWindow' class="chatWindow mb-3 pb-4">
                   <div id="chatWindowText"></div>
                 </div>
                 <!-- End Chat Window -->
 
-                <!-- Chat Input -->
-                <p class="inputLabel">Your Message</p>
-                <!-- <input class="chatInput" rows="2" type="textarea"></input> -->
-
+                <!-- Suggestion Place --><!--
                 <div class="input-group mb-3">
-                  <input type="text" class=" chatInput form-control" placeholder="Enter Message" aria-label="Enter Message" aria-describedby="basic-addon2">
-                  <div class="input-group-append">
-                    <button onclick="getProblems()" class="btn btn-outline-secondary" type="button">
-                      Send
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="alert alert-primary" role="alert">
+                                Recent Order 1
+                              </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="alert alert-primary" role="alert">
+                                Recent Order 2
+                              </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="alert alert-primary" role="alert">
+                                Recent Order
+                              </div>
+                        </div>
+                      </div>
 
+                      
+                    </div>
+                <!-- Suggestion Place -->
+                <!-- Chat Input -->
+                <div class="input-group mb-3">
+                  <input id="userInput" type="text" class=" chatInput form-control" placeholder="Enter Message" aria-label="Enter Message" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button id="submitQuestion" class="btn btn-outline-secondary" type="button">
+                      Send
                     </div>
                   </div>
                   <!-- End Chat Input -->
-
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
@@ -87,6 +96,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="finishedCode.js"></script>
+        <script src="event-handlers.js"></script>
         <script src="amaze-ai.js"></script>
       </body>
 
